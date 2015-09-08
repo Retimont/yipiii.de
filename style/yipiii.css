@@ -1,13 +1,20 @@
 @font-face {
 font-family: FiraSansLight;
-src: url("fonts/FiraSans-Light.woff") ;
+src: url("./fonts/FiraSans-Light.woff") ;
 }
 @font-face {
 font-family: FiraSansRegular;
-src: url("fonts/FiraSans-Regular.woff") ;
+src: url("./fonts/FiraSans-Regular.woff") ;
 }
 body {
   font-family: FiraSansRegular;
+}
+
+#rules{
+  padding-top: 25px;
+  background-color: white;
+  height: 250px;
+  margin-bottom:20px
 }
 
 .brand {
@@ -20,6 +27,12 @@ body {
   display:none;
 }
 
+.container.for_con {
+  background-color: #333;
+}
+.container.for_con .navigation{
+  margin-top:30px;
+}
 .navigation .nav-item {
     font-size: 16px;
     font-weight: normal;
@@ -31,7 +44,6 @@ body {
     color: #8cb240;
     display:inline;
     font-size: 16px;
-    
   }
 
 .block-title {
@@ -94,6 +106,10 @@ footer .right {
 @media screen and (max-width: 767px) {
   footer .left {
     text-align: center;
+  }
+  #rules
+  {
+    height: initial;
   }
 
   footer .right {
