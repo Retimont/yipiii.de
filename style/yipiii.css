@@ -1,12 +1,38 @@
+@font-face {
+font-family: FiraSansLight;
+src: url("fonts/FiraSans-Light.woff") ;
+}
+@font-face {
+font-family: FiraSansRegular;
+src: url("fonts/FiraSans-Regular.woff") ;
+}
+body {
+  font-family: FiraSansRegular;
+}
+
 .brand {
   height:60px;
-  top:-30px;
-  font-size:16px;
+  top:-18px;
+  font-size:20px;
 }
 
 .toggle_nav {
   display:none;
 }
+
+.navigation .nav-item {
+    font-size: 16px;
+    font-weight: normal;
+    letter-spacing: 0px;
+
+  }
+
+.navigation .nav-item i {
+    color: #8cb240;
+    display:inline;
+    font-size: 16px;
+    
+  }
 
 .block-title {
   display: inline-block;
@@ -20,14 +46,25 @@
 
 header {
   text-transform: initial;
+  background-color: #333;
+  color: white;
+  padding-top: 30px;
+  background: #333;
+  margin-bottom: 30px;
+  margin-top:0px;
+
+}
+
+main .container {
+  background: transparent;
 }
 
 
-
 footer {
+
   padding: 20px 0px 20px 0px;
   background-color: #444;
-  color: #999;
+  color: #fff;
   margin-top: 60px;
 }
 
@@ -43,6 +80,17 @@ footer .right {
   padding-bottom: 40px;
 }
 
+.small-head .nav-item a {
+  padding: 0;
+  display: inline;
+  }
+@media screen and (min-width: 992px){
+  .small-head .brand {
+      margin-top: 25px;
+      margin-bottom: 0px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   footer .left {
     text-align: center;
@@ -52,7 +100,9 @@ footer .right {
     text-align: center;
   }
   .brand {
-    top:-10px;
+    top:-30px;
   }
-
+  .container.small-head  {
+    background-color: transparent;
+  }
 }
