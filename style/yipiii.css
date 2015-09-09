@@ -13,8 +13,24 @@ body {
 #rules{
   padding-top: 25px;
   background-color: white;
-  height: 250px;
+  height: 200px;
   margin-bottom:20px
+}
+#rules p{
+color: #9C9C9C;
+    font-weight: 400;
+    letter-spacing: 0px;
+    line-height: 16px;
+    font-size: 13px;
+}
+
+a[aria-expanded="true"] .fa-chevron-right {
+  transform: rotate(90deg);
+  transition: transform 0.3s;
+}
+a[aria-expanded="false"] .fa-chevron-right {
+  transform: rotate(0deg);
+  transition: transform 0.5s;
 }
 
 .brand {
@@ -28,8 +44,9 @@ body {
 }
 
 .container.for_con {
-  background-color: #333;
-}
+  height: 40px;
+  padding-top: 0;
+  }
 .container.for_con .navigation{
   margin-top:30px;
 }
@@ -58,14 +75,19 @@ body {
 
 header {
   text-transform: initial;
-  background-color: #333;
+  background-color: transparent;;
   color: white;
-  padding-top: 30px;
-  background: #333;
+  padding-top: 0px;
+  background-color: #333;
   margin-bottom: 30px;
   margin-top:0px;
 
 }
+header .container{
+    background-color: #333;
+    margin-top: 0;
+    padding-top: 30px;
+  }
 
 main .container {
   background: transparent;
@@ -91,34 +113,70 @@ footer .right {
 .small-pading div[class^="col-"] {
   padding-bottom: 40px;
 }
+.container.small-head  {
+  height:90px;
+  background-color: #333;
+  padding-top: 0px;
+
+}
 
 .small-head .nav-item a {
   padding: 0;
   display: inline;
   }
+@keyframes small_header {
+    from {height: 100px;}
+    to {height: 50px;}
+}
+#header_fixed {
+background-color: #333;
+    height: 90px;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+}
 @media screen and (min-width: 992px){
   .small-head .brand {
       margin-top: 25px;
       margin-bottom: 0px;
+
   }
+
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 992px) {
+  header {
+    background-color: transparent;
+  }
+  #header_fixed {
+    display:none;
+  }
   footer .left {
     text-align: center;
   }
-  #rules
+    #rules
   {
-    height: initial;
+    height: initial !important;
   }
-
   footer .right {
     text-align: center;
   }
-  .brand {
+  .for_con.container .brand {
     top:-30px;
+    height: 100%;
+    font-size: 12px
+  }
+  .for_con.container .brand {
+  transition: all 1s;
+  height:40px;
   }
   .container.small-head  {
-    background-color: transparent;
+    margin-top: 0px;
+    padding-top: 20px;
+    /* padding-bottom: 0; */
+    overflow: hidden;
+    height: 50px;
+    animation-name: small_header;
+    animation-duration: 1s;
   }
 }

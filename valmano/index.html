@@ -6,7 +6,9 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <link href="../img/favicon.ico" rel="shortcut icon" type="image/x-icon">
       <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="../style/bootstrap.min.css">
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,200,100,500,600,700,800,900' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -21,14 +23,15 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
       <![endif]-->
   </head>
-  <body class="no-scrolling animsition" data-animsition-in="zoom-in" data-animsition-out="zoom-out"  style='background-color:white'>
+  <body class="no-scrolling " data-animsition-in="zoom-in" data-animsition-out="zoom-out"  style='background-color:white'>
 
     <!--
     THE HEADER
     -->
 
     <header>
-      <div class="container">
+    <div id="header_fixed"></div>
+      <div class="container ">
         <div class="for_con">
           <div class="brand" style=>
             <a href="/"><img src="../img/yipiii_logo.png" alt="logo"></a>&nbsp;&nbsp;&nbsp;&nbsp;Play&Win!
@@ -73,57 +76,65 @@
                             (function() { document.getElementById("iframe_yipiii").src = "http://campaign.yipiii.com/" + /token_(\w*)/g.exec(location.search)[1] + "/" + /\=(.*)$/g.exec(location.search)[1]; })()
                           </script>
                       </div>
-                      <div class="col-md-12 col-xs-12" id="rules" >
-                        <div class="col-md-2 col-xs-8 col-xs-offset-2" >
-                          <img src="Valmano_wheel.png"   class="img-responsive" style="margin:auto;padding-left:15px;padding-top:35px;">
-                        </div>
-                          <div class="col-md-10 col-xs-12" id="right-rules">
-                              <div class="col-md-12 col-xs-12"><h4>GEWINN-KOMBINATIONEN</h4></div>
-                              <div class="col-md-4 col-xs-12">
-                                <div class=" col-md-9 col-xs-9 ">
-                                  <h3 >1 & 2</h3>
-                                  <p style="text-align:left;max-width: 250px;">
-                                    Hauptpreis<br/>
-                                    3 Symbole innerhalb des Rahmens
-                                  </p>
-                                </div>
-                                <div class="col-md-3 col-xs-3">
-                                  <img class="img-responsive" src="Valmano_3win.png" />
-                                </div>
-                              </div>
-                              <div class="col-md-4 col-xs-12">
-                                <div class="pull-left col-md-9 col-xs-9">
-                                  <h3 >3. PREIS</h3>
-                                  <p style="text-align:left;max-width: 250px;">
-                                    Hauptpreis<br/>
-                                    2 Herzen innerhalb des Rahmens
-                                  </p>
-                                </div>
-                                <div class="col-md-3 col-xs-3">
-                                  <img class="img-responsive" src="Valmano_2win.png" />
-                                </div>
-                              </div>
-                              <div class="col-md-4">
-                                <div class="pull-left col-md-9 col-xs-9">
-                                  <p style="text-align:left;max-width: 250px;">
-                                    WEITERE PREIS<br/>
-                                    1 Herz innerhalb des Rahmens
-                                    (Beispielabbildung)
-                                  </p>
-                                </div>
-                                <div class="col-md-3 col-xs-3">
-                                  <img class="img-responsive" class="pull-right" src="Valmano_1win.png" />
-                                </div>
-                              </div>
+                    </div>
+                    <div class="row" id="rules" >
+                      <div class="col-md-2 col-xs-8 col-xs-offset-2 col-md-offset-0" >
+                        <img src="Valmano_wheel.png"   class="img-responsive" style="margin:auto;padding-left:15px;padding-top:10px;">
+                      </div>
+                      <div class="col-md-10 col-xs-12" id="right-rules">
+                          <div class="col-md-12 col-xs-12"><h4>GEWINN-KOMBINATIONEN</h4></div>
+                          <div class="col-md-4 col-xs-12">
+                            <div class=" col-md-8 col-xs-9 ">
+                              <h3 >1 & 2</h3>
+                              <p style="text-align:left;max-width: 250px;">
+                                Hauptpreis<br/>
+                                3 Symbole innerhalb des Rahmens
+                              </p>
                             </div>
+                            <div class="col-md-4 col-xs-3">
+                              <img class="img-responsive" src="Valmano_3win.png" />
+                            </div>
+                          </div>
+                          <div class="col-md-4 col-xs-12">
+                            <div class="pull-left col-md-8 col-xs-9">
+                              <h3 >3. PREIS</h3>
+                              <p style="text-align:left;max-width: 250px;">
+                                Hauptpreis<br/>
+                                2 Herzen innerhalb des Rahmens
+                              </p>
+                            </div>
+                            <div class="col-md-4 col-xs-3">
+                              <img class="img-responsive" src="Valmano_2win.png" />
+                            </div>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="pull-left col-md-8 col-xs-9">
+                              <p style="text-align:left;max-width: 250px;">
+                                WEITERE PREIS<br/>
+                                1 Herz innerhalb des Rahmens
+                                (Beispielabbildung)
+                              </p>
+                            </div>
+                            <div class="col-md-4 col-xs-3">
+                              <img class="img-responsive" class="pull-right" src="Valmano_1win.png" />
+                            </div>
+                          </div>
+                      <div class="clearfix"></div>
+                      </div>
+                    </div>
+                    <div class="row" id="disclaimer" >
+                      <div class="col-md-12">
+                        <a class="" role="button" data-toggle="collapse" href="#teilnahmebedingungen" aria-expanded="false" aria-controls="teilnahmebedingungen">
+                          <i class="fa fa-chevron-right"></i>&nbsp;TEILNAHMEBEDINGUNGEN
+                        </a>
+                        <div class="collapse" id="teilnahmebedingungen">
+                          <div class="well">
+                            Veranstalter des Gewinnspiels ist die Valmano GmbH. Teilnahmeberechtigt sind ausschließlich Personen, die zum Zeitpunkt der Teilnahme mindestens 18 Jahre alt sind. Teilnahmeschluss ist der 31.07.2015 um 15:00Uhr. Ablauf des Gewinnspiels und Gewinne: Der Teilnehmer gibt zu Beginn Namen und E-Mail-Adresse in das Eingabeformular des Gewinnspiels ein. Nach einem Klick auf "LOS GEHTS" erhält er eine E-Mail an die angegebene Adresse mit Bestätigungslink zur Teilnahme und zur Anmeldung zum VALMANO Newsletter. Nach Anklicken des Bestätigungslinks gelangt der Teilnehmer zum Gewinnspiel. Durch Anklicken des Glücksrads wird dieses gestartet. Das Anhalten des Glücksrad wird durch einen automatischen Zufallsalgorithmus bestimmt . Ob ein Gewinn vorliegt, ergibt sich aus der Anzahl der Herzen in dem schwarz umrandeten Ausschnitt („schwarzer Rahmen“) nach Anhalten des Glücksrades. Drei Herzen innerhalb des schwarzen Rahmens bedeuten Hauptpreis 1 oder 2. Zwei Herzen im Rahmen bedeuten Hauptpreis 3. Bei einem Herzen innerhalb des schwarzen Rahmens werden weitere Preise ausgegeben. Pro Person und pro Anmeldung sind nur 5 Spiele gestattet. Der Gewinner wird unmittelbar nach dem Spiel über seinen Gewinn informiert. Zudem wird eine Gewinnbenachrichtigung per E-Mail inklusive weiterer Informationen zum Gewinn und dessen Einlösung verschickt. Der 1. Hauptpreis ist ein Produkt Ihrer Wahl der Marke Fossil aus unserem Shop. Der 2. Hauptpreis ist ein Produkt Ihrer Wahl der Marke Skagen aus unserem Shop. Beides gilt solange der Vorrat reicht. Die Versandkosten werden durch VALMANO übernommen. Der 3. Preis ist ein 50EUR Geschenkgutschein für VALMANO. Dieser ist ähnlich anderer Zahlungsmittel nutzbar. Der Geschenkgutschein ist bis zum 31.12.2018 einlösbar. Bei den Preisen ab Platz 4 handelt es sich um Gutscheine. Diese sind gültig bis zum 07.08.2015. Die Gewinne können nicht in bar ausgezahlt, getauscht oder an Dritte weiterverkauft werden. Gewinnansprüche sind nicht auf andere Personen übertragbar. Nähere Informationen sind der jeweiligen Gewinnmitteilung zu entnehmen. Für eine Teilnahme ohne Newsletteranmeldung senden Sie bitte eine E-Mail an gewinnspiel@valmano.de mit dem Betreff „Teilnahmelink VALMANO Glücksrad“. Ein Mitarbeiter wird Ihnen dann den Teilnahmelink zusenden. Bitte beachten Sie, dass dies nur innerhalb der Arbeitszeiten möglich ist. Es gelten unsere allgemeinen Datenschutzbestimmungen. Sie können diese hier einsehen. Der Rechtsweg ist ausgeschlossen. Das Gewinnspiel kann ohne Angabe von Gründen verlängert oder vorzeitig beendet werden. Für diese Vereinbarung und die gesamten Rechtsbeziehungen zwischen dem Teilnehmer und VALMANO gilt ausschließlich das Recht der Bundesrepublik Deutschland.
                           </div>
                         </div>
                       </div>
-                      <div class="col-md-12">
-                        TEILNAHMEBEDINGUNGEN
-                        Veranstalter des Gewinnspiels ist die Valmano GmbH. Teilnahmeberechtigt sind ausschließlich Personen, die zum Zeitpunkt der Teilnahme mindestens 18 Jahre alt sind. Teilnahmeschluss ist der 31.07.2015 um 15:00Uhr. Ablauf des Gewinnspiels und Gewinne: Der Teilnehmer gibt zu Beginn Namen und E-Mail-Adresse in das Eingabeformular des Gewinnspiels ein. Nach einem Klick auf "LOS GEHTS" erhält er eine E-Mail an die angegebene Adresse mit Bestätigungslink zur Teilnahme und zur Anmeldung zum VALMANO Newsletter. Nach Anklicken des Bestätigungslinks gelangt der Teilnehmer zum Gewinnspiel. Durch Anklicken des Glücksrads wird dieses gestartet. Das Anhalten des Glücksrad wird durch einen automatischen Zufallsalgorithmus bestimmt . Ob ein Gewinn vorliegt, ergibt sich aus der Anzahl der Herzen in dem schwarz umrandeten Ausschnitt („schwarzer Rahmen“) nach Anhalten des Glücksrades. Drei Herzen innerhalb des schwarzen Rahmens bedeuten Hauptpreis 1 oder 2. Zwei Herzen im Rahmen bedeuten Hauptpreis 3. Bei einem Herzen innerhalb des schwarzen Rahmens werden weitere Preise ausgegeben. Pro Person und pro Anmeldung sind nur 5 Spiele gestattet. Der Gewinner wird unmittelbar nach dem Spiel über seinen Gewinn informiert. Zudem wird eine Gewinnbenachrichtigung per E-Mail inklusive weiterer Informationen zum Gewinn und dessen Einlösung verschickt. Der 1. Hauptpreis ist ein Produkt Ihrer Wahl der Marke Fossil aus unserem Shop. Der 2. Hauptpreis ist ein Produkt Ihrer Wahl der Marke Skagen aus unserem Shop. Beides gilt solange der Vorrat reicht. Die Versandkosten werden durch VALMANO übernommen. Der 3. Preis ist ein 50EUR Geschenkgutschein für VALMANO. Dieser ist ähnlich anderer Zahlungsmittel nutzbar. Der Geschenkgutschein ist bis zum 31.12.2018 einlösbar. Bei den Preisen ab Platz 4 handelt es sich um Gutscheine. Diese sind gültig bis zum 07.08.2015. Die Gewinne können nicht in bar ausgezahlt, getauscht oder an Dritte weiterverkauft werden. Gewinnansprüche sind nicht auf andere Personen übertragbar. Nähere Informationen sind der jeweiligen Gewinnmitteilung zu entnehmen. Für eine Teilnahme ohne Newsletteranmeldung senden Sie bitte eine E-Mail an gewinnspiel@valmano.de mit dem Betreff „Teilnahmelink VALMANO Glücksrad“. Ein Mitarbeiter wird Ihnen dann den Teilnahmelink zusenden. Bitte beachten Sie, dass dies nur innerhalb der Arbeitszeiten möglich ist. Es gelten unsere allgemeinen Datenschutzbestimmungen. Sie können diese hier einsehen. Der Rechtsweg ist ausgeschlossen. Das Gewinnspiel kann ohne Angabe von Gründen verlängert oder vorzeitig beendet werden. Für diese Vereinbarung und die gesamten Rechtsbeziehungen zwischen dem Teilnehmer und VALMANO gilt ausschließlich das Recht der Bundesrepublik Deutschland.
-                      </div>
                     </div>
+
 
                   </div>
                       </div>
@@ -159,6 +170,8 @@
     <script src="../script/idangerous.swiper.min.js"></script>
       <!-- animations -->
     <script src="../script/wow.min.js"></script>
+    <!-- bootstrap -->
+    <script src="http://getbootstrap.com//dist/js/bootstrap.min.js"></script>
       <!-- animation number library -->
     <script src="../script/jquery.animateNumber.min.js"></script>
       <!-- lightbox -->
