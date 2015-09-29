@@ -13,7 +13,7 @@ body {
 #rules{
   padding-top: 25px;
   background-color: white;
-  height: 200px;
+  height: 300px;
   margin-bottom:20px
 }
 #rules p{
@@ -23,7 +23,9 @@ color: #9C9C9C;
     line-height: 16px;
     font-size: 13px;
 }
-
+#right-rules {
+  margin-top: 25px;
+}
 a[aria-expanded="true"] .fa-chevron-right {
   transform: rotate(90deg);
   transition: transform 0.3s;
