@@ -1,0 +1,16 @@
+#right-rules {
+  margin-top: 0;
+}
+
+#rules h1, h4 {
+  color: #218dd3;
+}
+
+#rules h1 {
+  text-align: center;
+  letter-spacing: 0px;
+}
+
+#rules h4 {
+  font-size: 20px;
+}
