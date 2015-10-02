@@ -1,0 +1,38 @@
+@font-face {
+  font-family: 'EurostileLTW01-DemiObli';
+  src: url("EurostileLTW01-DemiObli.woff") ;
+}
+
+#rules{
+  background-color: transparent;
+}
+
+.left-title {
+  text-align: right;
+  margin-right: 26px;
+}
+.left-title h1 {
+  letter-spacing: 0px;
+  font-size: 33px;
+  line-height: 19px;
+}
+
+.left-title .last-line {
+  font-size: 28px;
+}
+
+.container.no-padding {
+  font-family: 'EurostileLTW01-DemiObli';
+}
+
+h1{
+  font-family: 'EurostileLTW01-DemiObli';
+}
+
+h1,h4, p, b, a{
+  color: white !important;
+}
+
+.well {
+  background-color: #666;
+}
