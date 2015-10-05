@@ -1,3 +1,6 @@
-.container.no-padding {
-  font-family: 'Open Sans';
-}
+    body {
+    /*background: url('http://www.horrorklinik.de/newdesign-images/fla/hk/horrorklinik_home_page_1_bg.jpg');*/
+    background-position: 50% 120px;
+    background-repeat: no-repeat;
+    background-color: #000;
+    }
