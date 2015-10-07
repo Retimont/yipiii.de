@@ -11,21 +11,13 @@ var Header = React.createClass({
     $(window).off('scroll', this.handleHeaderScroll);
   },
   handleHeaderScroll: function() {
-    if($(window).width() > 991) {
-      if ($(window).scrollTop() > 50) {
-        this.setState({isScrolled: true});
-      } else {
-        this.setState({isScrolled: false});
-      }
-    }
-    else{
-      if ($(window).scrollTop() > 10) {
-        this.setState({isScrolled: true});
-      }
-      else {
-        this.setState({isScrolled: false});
-      }
-    }
+    var $window = $(window),
+        width = $window.width(),
+        scrollTop = $window.scrollTop();
+
+    this.setState({
+      isScrolled: ((width > 991) && (scrollTop > 50)) || (scrollTop > 10)
+    });
   },
   render: function() {
     var isScrolled = this.state.isScrolled;
