@@ -1,10 +1,39 @@
 var Header = React.createClass({
+  getInitialState: function() {
+    return {
+      isScrolled: null
+    };
+  },
+  componentDidMount: function() {
+    window.addEventListener('scroll', this.handleHeaderScroll);
+  },
+  handleHeaderScroll: function() {
+    if($(window).width() > 991) {
+      if ($(window).scrollTop() > 50) {
+        this.setState({isScrolled: true});
+      } else {
+        this.setState({isScrolled: null});
+      }
+    }
+    else{
+      if ($(window).scrollTop() > 10) {
+        this.setState({isScrolled: true});
+      }
+      else {
+        this.setState({isScrolled: null});
+      }
+    }
+  },
   render: function() {
+    var isScrolled = this.state.isScrolled;
+    var nav = $('header .container');
+    var for_con = $('header .for_con');
+
     return (
       <div>
         <div id="header_fixed"></div>
-        <div className="container">
-          <div className="for_con">
+        <div className={isScrolled ? "container small-head" : "container"}>
+          <div className={isScrolled ? "for_con container" : "for_con"}>
             <div className="brand">
               <a href="/"><img src="../img/yipiii_logo.png" alt="logo"/></a>&nbsp;&nbsp;&nbsp;&nbsp;Play&nbsp;&&nbsp;Win!
             </div>

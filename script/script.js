@@ -72,7 +72,7 @@ $(function() {
   // 06 - function on page scroll
   //====================
   $(window).scroll(function () {
-        scrollF();
+        //scrollF();
         animate_numbers();
         animate_numbers_2();
         if (!$("body").hasClass("no-scrolling")){checkScrollig();}
