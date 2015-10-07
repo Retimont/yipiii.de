@@ -66,14 +66,7 @@ $(function() {
               tabFinish = 0;
           });
       });
-  });    
-
- 
-
-
-         
-    
-
+  });
 
   // ===================
   // 06 - function on page scroll
@@ -93,10 +86,10 @@ $(function() {
     var nav = $('header .container');
     var for_con = $('header .for_con');
     var  scrollF = function (){
-      if($(window).width() > 991) { 
+      if($(window).width() > 991) {
         if ($(window).scrollTop() > 50) {
-             nav.addClass("small-head");
-             for_con.addClass("container");
+          nav.addClass("small-head");
+          for_con.addClass("container");
         } else {
             nav.removeClass("small-head");
             for_con.removeClass("container");
@@ -106,16 +99,13 @@ $(function() {
       if ($(window).scrollTop() > 10) {
         nav.addClass("small-head");
         for_con.addClass("container");
-      } 
+      }
       else {
         nav.removeClass("small-head");
         for_con.removeClass("container");
       }
       }
     };
-    
-
-
 
 
       // ===================
@@ -123,8 +113,8 @@ $(function() {
       //====================
       function initSwiper(){
         var initIterator = 0;
-        $('.swiper-container').each(function(){   
-          var $t = $(this);                 
+        $('.swiper-container').each(function(){
+          var $t = $(this);
           var index = 'swiper-unique-id-'+initIterator;
           $t.attr('data-init', 'swiper-'+index).addClass('swiper-'+index);
           $t.find('.pagination').addClass('pagination-'+index);
