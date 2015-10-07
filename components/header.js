@@ -1,18 +1,21 @@
 var Header = React.createClass({
   getInitialState: function() {
     return {
-      isScrolled: null
+      isScrolled: false
     };
   },
   componentDidMount: function() {
-    window.addEventListener('scroll', this.handleHeaderScroll);
+    $(window).on('scroll', this.handleHeaderScroll);
+  },
+  componentWillUnmount: function() {
+    $(window).off('scroll', this.handleHeaderScroll);
   },
   handleHeaderScroll: function() {
     if($(window).width() > 991) {
       if ($(window).scrollTop() > 50) {
         this.setState({isScrolled: true});
       } else {
-        this.setState({isScrolled: null});
+        this.setState({isScrolled: false});
       }
     }
     else{
@@ -20,7 +23,7 @@ var Header = React.createClass({
         this.setState({isScrolled: true});
       }
       else {
-        this.setState({isScrolled: null});
+        this.setState({isScrolled: false});
       }
     }
   },
