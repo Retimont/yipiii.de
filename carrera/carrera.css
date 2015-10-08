@@ -43,7 +43,7 @@ h1{
   font-family: 'EurostileLTW01-DemiObli';
 }
 
-h1,h4, p, b, a{
+h1, p, a{
   color: white !important;
 }
 
