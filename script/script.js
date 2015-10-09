@@ -66,20 +66,12 @@ $(function() {
               tabFinish = 0;
           });
       });
-  });    
-
- 
-
-
-         
-    
-
+  });
 
   // ===================
   // 06 - function on page scroll
   //====================
   $(window).scroll(function () {
-        scrollF();
         animate_numbers();
         animate_numbers_2();
         if (!$("body").hasClass("no-scrolling")){checkScrollig();}
@@ -90,41 +82,15 @@ $(function() {
     // 07 - Sticky header
     //====================
 
-    var nav = $('header .container');
-    var for_con = $('header .for_con');
-    var  scrollF = function (){
-      if($(window).width() > 991) { 
-        if ($(window).scrollTop() > 50) {
-             nav.addClass("small-head");
-             for_con.addClass("container");
-        } else {
-            nav.removeClass("small-head");
-            for_con.removeClass("container");
-        }
-      }
-      else{
-      if ($(window).scrollTop() > 10) {
-        nav.addClass("small-head");
-        for_con.addClass("container");
-      } 
-      else {
-        nav.removeClass("small-head");
-        for_con.removeClass("container");
-      }
-      }
-    };
-    
-
-
-
+    // Moved to header react component
 
       // ===================
       //08 - SWIPER
       //====================
       function initSwiper(){
         var initIterator = 0;
-        $('.swiper-container').each(function(){   
-          var $t = $(this);                 
+        $('.swiper-container').each(function(){
+          var $t = $(this);
           var index = 'swiper-unique-id-'+initIterator;
           $t.attr('data-init', 'swiper-'+index).addClass('swiper-'+index);
           $t.find('.pagination').addClass('pagination-'+index);
@@ -449,7 +415,6 @@ var animate_numbers_2 = function(){
 	  $(window).load(function(){   
 		pageCalculations();
 		initSwiper();
-		scrollF();
 		animate_numbers();
 		if (!$("body").hasClass("no-scrolling")){checkScrollig();}
 		animate_numbers_2();  
