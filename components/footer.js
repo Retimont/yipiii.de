@@ -28,6 +28,7 @@ var Footer = React.createClass({
           </div>
         </div>
       </div>
+      
     );
   }
 });
