@@ -1,46 +1,40 @@
 var Header = React.createClass({
-  getInitialState: function() {
-    return {
-      isScrolled: false
-    };
-  },
   componentDidMount: function() {
-    this.handleHeaderScroll();
-    $(window).on('scroll', this.handleHeaderScroll);
+    $('.navbar-nav li a').on ('click', this.handleMenuHiding);
   },
   componentWillUnmount: function() {
-    $(window).off('scroll', this.handleHeaderScroll);
+    $('.navbar-nav li a').off ('click', this.handleMenuHiding);
   },
-  handleHeaderScroll: function() {
-    var $window = $(window),
-        width = $window.width(),
-        scrollTop = $window.scrollTop();
-
-    this.setState({
-      isScrolled: ((width > 991) && (scrollTop > 50)) || (scrollTop > 10)
-    });
+  handleMenuHiding: function(){
+    $(".navbar-collapse").collapse('hide');
   },
   render: function() {
-    var isScrolled = this.state.isScrolled;
-    var isRoot = this.state.isRoot;
-    var nav = $('header .container');
-    var for_con = $('header .for_con');
-
     return (
-      <div>
-        <div id="header_fixed"></div>
-        <div className={isScrolled ? "container small-head" : "container"}>
-          <div className={isScrolled ? "for_con container" : "for_con"}>
-            <div className="brand">
-              <a href="/"><img src="/img/yipiii_logo.png" alt="logo"/></a>&nbsp;&nbsp;&nbsp;&nbsp;Play&nbsp;&&nbsp;Win!
+      <div className="container">
+        <div className="row">
+          <div className="col-sm-6 col-md-5" id="y_header_left">
+            <div className="navbar-header">
+              <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span className="sr-only">Toggle navigation</span>
+                <span className="icon-bar"></span>
+                <span className="icon-bar"></span>
+                <span className="icon-bar"></span>
+              </button>
+              <a className="navbar-brand" href="/"><img src="../img/yipiii_logo.png" alt="yipiii" title="yipiii" /><p>&nbsp;&nbsp;&nbsp;Dein neues Gewinnspielportal</p></a>
             </div>
-            <div className="toggle_nav"><button className="cmn-toggle-switch cmn-toggle-switch__htx"><span></span></button></div>
-            <nav className="navigation">
-              <div className="nav-item "><i className="fa fa-check"></i>&nbsp;live gewinnen</div>
-              <div className="nav-item"><i className="fa fa-check"></i>&nbsp;sofort einlösen</div>
-              <div className="nav-item"><i className="fa fa-check"></i>&nbsp;exklusive Gutscheine</div>
-            </nav>
           </div>
+          <div className="col-sm-6 col-md-5 " id="y_header_center">
+            <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul className="nav navbar-nav">
+                <li><a href="../index.html#an_games" title="Gewinnspiele">Gewinnspiele <i className="glyphicon glyphicon-triangle-bottom"></i></a></li>
+                <li><a href="../index.html#an_about" title="Über uns">Über uns <i className="glyphicon glyphicon-triangle-bottom"></i></a></li>
+                <li><a href="../index.html#an_contact" title="Kontakt">Kontakt <i className="glyphicon glyphicon-triangle-bottom"></i></a></li>
+              </ul>
+            </div>
+           </div>
+            <div className="col-md-2 hidden-xs hidden-sm" id="y_header_right">
+              <a href="#an_awards" title="Rechtlich geprüfte Gewinnspiele"><img src="../img/badge.png" alt="Rechtlich geprüfte Gewinnspiele" title="Rechtlich geprüfte Gewinnspiele" /></a>
+           </div>
         </div>
       </div>
     );

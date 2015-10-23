@@ -31,13 +31,6 @@
     
     
   <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/de_DE/sdk.js#xfbml=1&version=v2.5";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
   
 
   
@@ -47,70 +40,8 @@
   
   
   
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  
-  <div class="container">
-    
-    
-    
-    <div class="row"><!-- row of columns -->
-        
-        <div class="col-sm-6 col-md-5" id="y_header_left">
-          <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/"><img src="../img/yipiii_logo.png" alt="yipiii" title="yipiii"><p>&nbsp;&nbsp;&nbsp;Dein neues Gewinnspielportal</p></a>
-    </div>
-        </div>
-        
-        <div class="col-sm-6 col-md-5 " id="y_header_center">
-          <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="../index.html#an_games" title="Gewinnspiele">Gewinnspiele <i class="glyphicon glyphicon-triangle-bottom"></i></a></li>
-        <li><a href="../index.html#an_about" title="Über uns">Über uns <i class="glyphicon glyphicon-triangle-bottom"></i></a></li>
-        <li><a href="../index.html#an_contact" title="Kontakt">Kontakt <i class="glyphicon glyphicon-triangle-bottom"></i></a></li>
-        
-      </ul>
-        
-    </div><!-- /.navbar-collapse -->    
-       </div>
-        
-        <div class="col-md-2 hidden-xs hidden-sm" id="y_header_right">
-             <a href="#an_awards" title="Rechtlich geprüfte Gewinnspiele"><img src="../img/badge.png" alt="Rechtlich geprüfte Gewinnspiele" title="Rechtlich geprüfte Gewinnspiele"> 
-       </div>
-  
-    </div><!-- end row -->
-    
-    
-    
-    
-    
-    
-    
-    <!-- Brand and toggle get grouped for better mobile display -->
-    
-
-    
-  </div><!-- /.container-fluid -->
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+<nav class="navbar navbar-inverse navbar-fixed-top" id="header">
 </nav><!-- navbar -->
-
-
-
 
 <!-- anchor --> 
 <a name="an_games"></a>
@@ -288,52 +219,6 @@
     
    
 <div class="jumbotron" id="footer">
-      <div class="container">
-        
-        
-        
-            <div class="row">
-            
-              <div class="col-md-2 col-sm-2 col-xs-6" id="">
-                <h5>Über Yipiii</h5>
-                <li><a href="../index.html#an_about" title="Über uns">Über uns</a></li>
-                <li><a href="../index.html#an_contact" title="Kontakt">Kontakt</a></li>
-                <li><a href="../daten.html" title="Datenschutz">Datenschutz</a></li>
-                <li><a href="../agb.html" title="AGB">AGB</a></li> 
-              </div>
-            
-              <div class="col-md-2 col-sm-2 col-xs-6" id="">
-                <h5>Yipiii business</h5>
-                <li><a href="http://winmarket.de/" title="Für Handel">Für Handel</a></li>
-                <li><a href="http://winmarket.de/" title="Für Hersteller">Für Hersteller</a></li>
-              </div>
-                
-              <div class="col-md-8 col-sm-8 col-xs-12" id="">
-              <div class="fb-page" data-href="https://www.facebook.com/yipiiide?fref=ts" data-width="290" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore">
-              <blockquote cite="https://www.facebook.com/yipiiide?fref=ts"><a href="https://www.facebook.com/yipiiide?fref=ts">Yipiii.de</a></blockquote></div></div></div>
-            
-            </div><!-- end row -->
-         
-         
-         
-        <hr>
-         
-         
-         
-
-         
-         
-         
-        <div class="row">
-            
-              <div class="col-md-12">
-                <p id="y_copy">© 2015 winmarket solutions GmbH</p>
-              </div>
-            
-        </div><!-- end row -->
-         
-         
-      </div>
 </div><!-- end footer -->
     
     
@@ -346,15 +231,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="../js/bootstrap.min.js"></script>
-    
-    <script>
-     $(function() {
-       $('.navbar-nav li a').click(function(){
-         $(".navbar-collapse").collapse('hide');
-       });
-     });
-   </script>
-    
+
+    <!-- React -->
+    <script src="../script/react-0.13.3.min.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+    <script type="text/babel" src="../components/header.js"></script>
+    <script type="text/babel" src="../components/footer.js"></script>
+
   </body>
   
   <!-- Google Tag Manager -->
