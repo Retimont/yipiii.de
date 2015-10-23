@@ -1,0 +1,15 @@
+#agb{
+  text-align: justify;
+}
+#agb p{
+  font-size: 14px !important;
+}
+ 
+span.c1, p.c1{
+          font-weight: bold;
+          font-size: 15;
+        }
+span.c3, p.c3 {
+          color:black;
+          font-weight:400;
+        }

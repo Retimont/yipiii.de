@@ -1,16 +1,56 @@
-#right-rules {
-  margin-top: 0;
+#y_container_lp{
+  margin-top:50px;
 }
 
-#rules h1, h4 {
-  color: #218dd3;
+#y_container_lp #y_row_explanation{
+  color: #038ac7;
 }
-
-#rules h1 {
+#y_container_lp .y_possibility img{
+        float:none;
+        margin-left: auto;
+        margin-right: auto;
+        max-height: 157px;
+}
+#y_container_lp .y_possibility p{
+  width: 100%;
   text-align: center;
-  letter-spacing: 0px;
+  font-size: 20px;
+  margin-top: 20px;
 }
 
-#rules h4 {
-  font-size: 20px;
+#y_rules_title h3{
+  text-align: center;
+  font-size: 25px;
 }
+#y_terms{
+  color: #038ac7;
+}
+.y_terms_title, .y_terms_title:hover, .y_terms_title:focus{
+        color: #038ac7;
+}
+#teilnahmebedingungen a{
+        color: #038ac7;
+        text-decoration: underline;
+}
+#teilnahmebedingungen a:hover{
+        color: #038ac7;
+        text-decoration: underline;
+}
+
+
+
+
+/* ---------------------------------- big resolutions-------------------------------------------- */
+@media screen and (min-width: 1200px){
+#y_container_lp iframe{
+  padding-top: 75px;
+}
+}
+
+/* ---------------------------------- small resolutions-------------------------------------------- */
+@media screen and (max-width: 460px){
+#y_container_lp iframe{
+  height:640px;
+}
+}
+

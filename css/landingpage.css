@@ -1,0 +1,158 @@
+
+/* landing page */
+#y_container_lp .y_no_padding{
+    padding:0px;
+}
+
+#y_container_lp{
+    background-color:#fff;
+}
+
+#y_container_lp .page-header{
+        background-color:#fff;
+        border: none;
+}
+#y_container_lp .page-header img{
+        max-height:60px;       
+}
+#y_container_lp .page-header h1{
+        margin:0px;
+}
+
+#y_teaser_in{
+  float: left;
+  width:571px;
+  height: 657px;
+  border: 1px solid #e1e1e1;
+}
+#y_teaser_in img{
+  width:571px;
+  height: 655px;
+}
+#y_iframe_in{
+  float: right;
+  width:571px;
+  height: 657px;
+  border: 1px solid #e1e1e1;
+}
+
+#y_container_lp #y_row_explanation{
+        background-color: #fff;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-top: 20px;
+        border: 1px solid #e1e1e1;
+}
+#y_container_lp .y_possibility img{
+        float: right;
+        max-height: 157px;
+}
+
+#y_container_lp #y_terms{
+    background-color:#fff;
+    margin-bottom: 50px;
+    padding-top: 20px;
+}
+#y_container_lp #y_terms .well{
+    background-color:#fff;
+}
+.y_terms_title, .y_terms_title:hover, .y_terms_title:focus{
+        color: #333;
+        text-decoration:none;
+        outline: none;
+}
+#teilnahmebedingungen{
+        text-align: justify;
+}
+#teilnahmebedingungen a{
+        color: #333;
+        text-decoration: underline;
+}
+#teilnahmebedingungen a:hover{
+        color: #666;
+        text-decoration: underline;
+}
+a[aria-expanded="true"] .glyphicon-chevron-right {
+  transform: rotate(90deg);
+  transition: transform 0.3s;
+}
+a[aria-expanded="false"] .glyphicon-chevron-right {
+  transform: rotate(0deg);
+  transition: transform 0.5s;
+}
+
+/* ---------------------------------- middle resolutions-------------------------------------------- */
+@media screen and (min-width: 992px) and (max-width: 1200px){
+  #y_teaser_in{
+  width:473px;
+  height:544px;
+}
+#y_teaser_in img{
+  width:473px;
+  height:542px;
+}
+#y_iframe_in{
+  width:473px;
+  height:544px;
+}
+
+}
+
+/* ---------------------------------- small resolutions-------------------------------------------- */
+@media screen and (min-width: 1px) and (max-width: 992px){
+#y_teaser_in{
+  float: none;
+  width:100%;
+  max-width:473px; 
+  height:auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+#y_teaser_in img{
+  width:100%;
+  max-width:473px;
+  height:auto;
+}
+#y_iframe_in{
+  float: none;
+  width:100%;
+  max-width:473px;
+  height:500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#y_row_explanation{
+  float: none;
+  width:100%;
+  max-width:473px;
+  height:auto;
+  margin-left: auto;
+  margin-right: auto;
+}    
+.y_possibility{
+        margin-top: 20px;
+}   
+#y_container_lp .y_no_padding{
+    padding:0px 15px 0px 15px;
+}
+#y_container_lp #y_terms{
+    float: none;
+    width:100%;
+    max-width:473px;
+    height:auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+#y_iframe_in{
+  height: auto;
+}
+}
+
+
+/* ---------------------------------- small resolutions-------------------------------------------- */
+@media screen and (max-width: 320px){
+#y_container_lp .page-header img{
+        max-width:240px;       
+}
+}

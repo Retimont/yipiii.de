@@ -1,0 +1,29 @@
+body {
+    /*background: url('http://www.horrorklinik.de/newdesign-images/fla/hk/horrorklinik_home_page_1_bg.jpg');*/
+    background-position: 50% 120px;
+    background-repeat: no-repeat;
+    background-color: #000;
+}
+
+.post-container {
+    padding: 0 0px;
+}
+.portfolio-block {
+    padding-top: 20px;
+}
+.small-pading{
+    padding-bottom: 0px;
+}
+.prova{
+    background-position:right bottom !important;
+    padding: 0px !important;
+    margin: 0px !important;
+}
+.prova_titolo{
+    margin-bottom: 20px;
+}
+@media only screen and (min-width: 970px) {
+.center-block{
+    float: left;
+}
+}

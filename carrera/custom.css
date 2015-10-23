@@ -1,0 +1,191 @@
+@font-face {
+  font-family: 'EurostileLTW01-DemiObli';
+  src: url("EurostileLTW01-DemiObli.woff") ;
+}
+
+body{
+  background-color: #000;
+}
+
+#y_container_lp{
+   font-family: 'EurostileLTW01-DemiObli';
+   background-color:#3a3a3a;
+   color: #fff;
+   background-image: url("img/background.jpg");
+   background-repeat: no-repeat;
+}
+
+
+#y_container_lp .page-header{
+        background:transparent;
+        border: none;
+        margin-bottom:50px !important;
+}
+
+
+#y_teaser_in{
+  float: left;
+  height:544px;
+  border:none;
+  text-align: right;
+}
+#y_teaser_in img{
+  width:auto;
+  height: auto;
+  float: right;
+  max-width: 100%;
+}
+#y_teaser_in p{
+  width:auto;
+  height: auto;
+  float: right;
+  padding-right: 26px;
+  padding-top: 20px;
+  font-size: 34px;
+}
+#y_iframe_in{
+  height:544px;
+  border:none;
+}
+#y_iframe_in iframe{
+  width:90%
+}
+
+#y_container_lp #y_row_explanation{
+        background:transparent;
+        padding-top:0px;
+        padding-bottom: 20px;
+        margin-top: 0px;
+        border:none;
+        font-size: 13px;
+}
+
+
+#y_container_lp .y_possibility img{
+        float: right;
+        max-height: 157px;
+}
+#y_container_lp .y_possibility .text24{
+  font-size: 24px;
+}
+#y_container_lp .y_possibility .text18{
+  font-size: 18px;
+}
+#y_container_lp .y_possibility .text9{
+  font-size:10px;
+}
+
+#y_container_lp #y_terms{
+   background:transparent;
+    margin-bottom: 50px;
+    padding-top: 20px;
+}
+#y_container_lp #y_terms .well{
+   background:transparent;
+}
+.y_terms_title, .y_terms_title:hover, .y_terms_title:focus{
+        color: #ccc;
+        text-decoration:none;
+        outline: none;
+}
+#teilnahmebedingungen a{
+        color: #ccc;
+        text-decoration: underline;
+}
+#teilnahmebedingungen a:hover{
+        color: #ccc;
+        text-decoration: underline;
+}
+
+
+/* ---------------------------------- middle resolutions-------------------------------------------- */
+@media screen and (min-width: 992px) and (max-width: 1200px){
+#y_teaser_in p{
+  width:auto;
+  height: auto;
+  float: right;
+  padding-right: 26px;
+  padding-top:15px;
+  font-size:28px;
+}
+#y_teaser_in img{
+  width:auto;
+  height: auto;
+  float: right;
+}
+
+}
+
+/* ---------------------------------- small resolutions-------------------------------------------- */
+@media screen and (min-width: 1px) and (max-width: 992px){
+#y_teaser_in{
+  float: none;
+  max-width:473px; 
+  margin-bottom: 20px;
+  height:auto;
+  text-align: center;
+}
+#y_teaser_in img{
+  float: none;
+  width:auto;
+  height:auto;
+  padding: 0px;
+  margin: 0px auto 0px auto;
+}
+
+#y_teaser_in p{
+  width:auto;
+  height: auto;
+  float:none;
+  padding-right:0px;
+  padding-top: 0px;
+  font-size:28px;
+}
+
+#y_iframe_in{
+  height:500px;
+}
+#y_iframe_in iframe{
+  width:100%;
+} 
+.y_possibility img{
+  float:none !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.y_possibility p{
+  float: left;
+  width: 100%;
+  height: auto;
+}  
+
+}
+
+
+
+/* ---------------------------------- small resolutions-------------------------------------------- */
+@media screen and (min-width: 1px) and (max-width: 768px){
+  
+.y_possibility img{
+  float:right !important;
+}
+.y_possibility p{
+  float:none;
+  width:auto;
+  height: auto;
+}
+
+}
+
+
+/* ---------------------------------- xsmall resolutions-------------------------------------------- */
+@media screen and (max-width: 480px){
+  
+#y_iframe_in{
+  height: auto;
+} 
+#y_iframe_in iframe{
+  height:570px !important;
+} 
+
+}
