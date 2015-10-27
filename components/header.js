@@ -20,7 +20,7 @@ var Header = React.createClass({
                 <span className="icon-bar"></span>
                 <span className="icon-bar"></span>
               </button>
-              <a className="navbar-brand" href="/"><img src="../img/yipiii_logo.png" alt="yipiii" title="yipiii" /><p>&nbsp;&nbsp;&nbsp;Dein neues Gewinnspielportal</p></a>
+              <a className="navbar-brand" href="/"><img src="/img/yipiii_logo.png" alt="yipiii" title="yipiii" /><p>&nbsp;&nbsp;&nbsp;Dein neues Gewinnspielportal</p></a>
             </div>
           </div>
           <div className="col-sm-6 col-md-5 " id="y_header_center">
@@ -33,7 +33,7 @@ var Header = React.createClass({
             </div>
            </div>
             <div className="col-md-2 hidden-xs hidden-sm" id="y_header_right">
-              <a href="#an_awards" title="Rechtlich geprüfte Gewinnspiele"><img src="../img/badge.png" alt="Rechtlich geprüfte Gewinnspiele" title="Rechtlich geprüfte Gewinnspiele" /></a>
+              <a href="#an_awards" title="Rechtlich geprüfte Gewinnspiele"><img src="/img/badge.png" alt="Rechtlich geprüfte Gewinnspiele" title="Rechtlich geprüfte Gewinnspiele" /></a>
            </div>
         </div>
       </div>
