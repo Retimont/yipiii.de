@@ -10,13 +10,8 @@ var Footer = React.createClass({
   },
   checkIfRoot: function() {
     var location = window.location.pathname;
-    // For yipiii.de
-    // this.setState({
-    //   isRoot: ((location === "/") || (location === "/index.html") || (location === "/daten.html") || (location === "/agb.html"))
-    // });
-
     this.setState({
-      isRoot: ((location === "/it_frontend/carmen/yipiii.de/") || (location === "/it_frontend/carmen/yipiii.de/index.html") || (location === "/it_frontend/carmen/yipiii.de/daten.html") || (location === "/it_frontend/carmen/yipiii.de/agb.html"))
+      isRoot: ((location === "/") || (location === "/index.html") || (location === "/daten.html") || (location === "/agb.html"))
     });
   },
   facebookScript: function(d, s, id) {
